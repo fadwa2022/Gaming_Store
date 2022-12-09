@@ -1,0 +1,99 @@
+/* ==== FONTS ==== */
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;600&family=Poppins:wght@500;600&family=Roboto:wght@100;300;500;700&family=Ubuntu:wght@300;500&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+:root {
+  --blue: #287bff;
+  --white: #fff;
+  --grey: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+  --radial_gradient: radial-gradient(
+    circle at 10% 20%,
+    rgb(0, 0, 0) 0%,
+    rgb(64, 64, 64) 90.2%
+  );
+}
+
+
+
+#side_nav {
+  background: #2d2d2d;
+  min-width: 250px;
+  max-width: 250px;
+  transition: all 0.5s ease;
+  min-height: 100vh;
+  z-index: 99;
+}
+
+
+.content {
+  min-height: 100vh;
+  width: 100%;
+  /* position: relative; */
+}
+
+hr.h-color {
+  background: #eee;
+}
+
+.sidebar li.active a {
+  background: #eee !important;
+  /* border-radius: 8px; */
+  color: #222 !important;
+}
+
+/* .sidebar li a:hover {
+  color: #222 !important;
+  background: rgb(188, 187, 187) !important;
+} */
+
+/* .sidebar li a {
+  color: #fff;
+} */
+
+.sidebar li a {
+  color: #fff !important;
+  transition: all 0.5s ease !important;
+  z-index: 12 !important;
+  position: relative !important;
+}
+
+.sidebar li a::after {
+  content: "" !important;
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: #eee !important;
+  transform: scaleX(0) !important;
+  border-radius: 5px !important;
+  transition: transform 0.3s ease-in-out !important;
+  transform-origin: left !important;
+  z-index: -2 !important;
+}
+.sidebar li a:hover::after {
+  transform: scaleX(1) !important;
+  color: red !important;
+}
+
+
+
+@media screen and (max-width: 767px) {
+  #side_nav {
+    margin-left: -250px;
+    position: fixed;
+    min-height: 100vh;
+    z-index: 1;
+  }
+
+  #side_nav.active {
+    margin-left: 0;
+
+  }
+}
